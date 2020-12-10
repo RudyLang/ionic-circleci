@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y git bzip2 openssh-client && \
 RUN apt-get update && \
       apt-get -y install sudo
 
-# Install ionic core (5.5.2 December 9, 2020)
-RUN sudo npm i -g --unsafe-perm ionic@5.5.2
+# Install ionic cli
+RUN sudo npm i -g --unsafe-perm @ionic/cli
 
 # Install ionic vue
 RUN sudo npm i -g --unsafe-perm @ionic/vue
