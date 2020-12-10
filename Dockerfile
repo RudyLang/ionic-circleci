@@ -5,5 +5,5 @@ FROM beevelop/ionic
 RUN apt-get update && \
       apt-get -y install sudo
 
-# Include Vue CLI for Vue.js Ionic build script
-RUN sudo npm i -g @vue/cli
+# Download the latest Ionic CLI
+RUN npm i -g @ionic/cli@latest
