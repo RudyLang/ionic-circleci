@@ -1,11 +1,16 @@
 # Use beelevop's cordova image as base (https://github.com/beevelop/docker-cordova)
 FROM beevelop/cordova
 
-# Install ionic/vue specifically
+# Run Updates
 RUN apt-get update && apt-get install -y git bzip2 openssh-client && \
-    npm i -g --unsafe-perm @ionic/vue && \
     rm -rf /var/lib/apt/lists/* && apt-get clean
 
 # Install sudo
 RUN apt-get update && \
       apt-get -y install sudo
+
+# Install ionic core (5.5.2 December 9, 2020)
+RUN sudo npm i -g --unsafe-perm ionic@5.5.2
+
+# Install ionic vue
+RUN sudo npm i -g --unsafe-perm @ionic/vue
