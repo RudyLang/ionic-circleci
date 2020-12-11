@@ -14,3 +14,6 @@ RUN sudo npm i -g --unsafe-perm @ionic/cli
 
 # Install ionic vue
 RUN sudo npm i -g --unsafe-perm @ionic/vue
+
+# Install cordova-res to handle icon and splash screen generation
+RUN sudo npm i -g cordova-res
